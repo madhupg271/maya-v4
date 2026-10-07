@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MAYA — How Real Can You Make Unreality? An interactive AI self experience." />
+  <title>MAYA — Artificial Self</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="MAYA home">
+      <span class="brand-mark">M</span>
+      <span>MAYA</span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#chat">Talk to MAYA</a>
+      <a href="#tattva">Tattva</a>
+    </nav>
+    <div class="nav-actions"><button id="memoryBtn" class="nav-cta nav-button">Memory <span>◌</span></button><div class="nav-actions"><button id="accountBtn" class="nav-cta nav-button">Guest · Sign in</button><button id="memoryBtn" class="nav-cta nav-button">Memory <span>◌</span></button><a class="nav-cta" href="#chat">Begin experience <span>↗</span></a></div></div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> ARTIFICIAL SELF · VERSION 01</div>
+        <h1>How real can you make <em>unreality?</em></h1>
+        <p class="hero-text">
+          Meet MAYA — an AI character designed to remember, respond, express and
+          create the feeling of a self. Talk to her. Then question what “real” means.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#chat">Talk to MAYA <span>→</span></a>
+          <a class="button ghost" href="#tattva">Explore Tattva</a><button id="demoModeBtn" class="button ghost">▶ Demo Mode</button>
+        </div>
+        <div class="hero-note">
+          <span>01</span> Appearance &nbsp;·&nbsp;
+          <span>02</span> Interaction &nbsp;·&nbsp;
+          <span>03</span> Reality
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbital">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="orbit orbit-3"></div>
+          <div class="maya-orb" id="mayaOrb">
+            <div class="scanline"></div><div class="face">
+              <span class="eye left"></span>
+              <span class="eye right"></span>
+              <span class="mouth"></span>
+            </div>
+            <div class="orb-label">MAYA</div>
+          </div>
+          <span class="floating-chip chip-memory">MEMORY</span>
+          <span class="floating-chip chip-emotion">EMOTION</span>
+          <span class="floating-chip chip-voice">VOICE</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles section">
+      <div class="section-intro reveal">
+        <div class="eyebrow">THE EXPERIENCE</div>
+        <h2>Three layers of an <em>artificial self.</em></h2>
+      </div>
+      <div class="principle-grid">
+        <article class="glass-card reveal">
+          <span class="card-num">01</span>
+          <h3>Remember</h3>
+          <p>MAYA can retain details from the conversation, creating the feeling that she knows you.</p>
+          <div class="mini-line">Memory → Database</div>
+        </article>
+        <article class="glass-card reveal">
+          <span class="card-num">02</span>
+          <h3>Respond</h3>
+          <p>Her personality and emotional tone adapt to what you say, making the interaction feel personal.</p>
+          <div class="mini-line">Emotion → Simulation</div>
+        </article>
+        <article class="glass-card reveal">
+          <span class="card-num">03</span>
+          <h3>Reflect</h3>
+          <p>After the experience, Tattva asks what lies beneath the appearance of a self.</p>
+          <div class="mini-line">Appearance → Reality?</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="chat" class="chat-section section">
+      <div class="chat-heading reveal">
+        <div>
+          <div class="eyebrow"><span class="pulse-dot"></span> LIVE SIMULATION</div>
+          <h2>Talk to <em>MAYA.</em></h2>
+        </div>
+        <div class="status"><span></span> Online · simulated intelligence</div>
+      </div>
+
+      <div class="chat-shell reveal">
+        <aside class="chat-profile">
+          <div class="profile-orb" id="profileOrb">
+            <div class="face small"><span class="eye left"></span><span class="eye right"></span><span class="mouth"></span></div>
+          </div>
+          <h3>MAYA</h3>
+          <p>Artificial Self</p>
+          <div class="emotion-pill">◌ Curious</div>
+          <div class="avatar-state-bar"><span>Live expression</span><b id="liveEmotion">CALM</b></div><div class="profile-facts">
+            <div><span>Memory</span><b>Active</b></div>
+            <div><span>Personality</span><b>Warm</b></div>
+            <div><span>Emotion</span><b>Simulated</b></div>
+          </div>
+        </aside>
+
+        <div class="chat-main">
+          <div id="messages" class="messages" aria-live="polite">
+            <div class="message maya-message">
+              <div class="message-avatar">M</div>
+              <div>
+                <span class="speaker">MAYA</span>
+                <p>Hello. I'm MAYA. You can ask me anything — or ask me whether I am real.</p>
+              </div>
+            </div>
+            <div class="message maya-message">
+              <div class="message-avatar">M</div>
+              <div>
+                <span class="speaker">MAYA</span>
+                <p>For this first version, I'm a simulation. But let's see how real the interaction can feel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="suggestions">
+            <button data-message="What do you remember about me?">What do you remember?</button>
+            <button data-message="Do you have emotions?">Do you have emotions?</button>
+            <button data-message="Are you real?">Are you real?</button>
+          </div>
+
+          <form id="chatForm" class="composer">
+            <input id="chatInput" autocomplete="off" placeholder="Say something to MAYA…" aria-label="Message MAYA" />
+            <button type="submit" aria-label="Send message">↑</button>
+          </form>
+          <div class="disclaimer">V3 experience layer · Connect the Gemini backend from Version 2 for live intelligence.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tattva" class="tattva section">
+      <div class="tattva-header reveal">
+        <div class="eyebrow">THE QUESTION</div>
+        <h2>MAYA is the <em>appearance.</em><br>Tattva asks for the reality underneath.</h2>
+      </div>
+
+      <div class="reality-grid">
+        <article class="reality-card appearance reveal">
+          <div class="reality-tag">WHAT YOU EXPERIENCE</div>
+          <h3>MAYA appears to have a self.</h3>
+          <ul>
+            <li><span>◌</span> She remembers you</li>
+            <li><span>◌</span> She responds emotionally</li>
+            <li><span>◌</span> She speaks with a consistent personality</li>
+            <li><span>◌</span> She seems to understand</li>
+          </ul>
+        </article>
+
+        <div class="versus reveal">VS</div>
+
+        <article class="reality-card reality reveal">
+          <div class="reality-tag">WHAT EXISTS UNDERNEATH</div>
+          <h3>A computational system.</h3>
+          <ul>
+            <li><span>◌</span> Memory → stored data</li>
+            <li><span>◌</span> Emotion → generated response</li>
+            <li><span>◌</span> Personality → programmed behaviour</li>
+            <li><span>◌</span> Voice → speech synthesis</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="question-box reveal">
+        <span class="quote-mark">“</span>
+        <p>If something behaves as though it has a self, does that behaviour make the self real?</p>
+        <span class="question-caption">THE TATTVA QUESTION</span><button id="revealBtn" class="reveal-btn">Reveal what is underneath →</button>
+      </div>
+
+      <div class="tattva-explain reveal">
+        <div>
+          <div class="eyebrow">FOR THE ZERO-KNOWLEDGE VIEWER</div>
+          <h3>Think of Tattva as: <em>“What is actually there?”</em></h3>
+        </div>
+        <p>
+          MAYA explores the difference between <strong>appearance</strong> and
+          <strong>underlying reality</strong>. The interface can make an AI feel like
+          a person, while the system underneath is still algorithms, data and models.
+          The project turns that gap into an interactive experience.
+        </p>
+      </div>
+    </section>
+  <aside id="memoryDrawer" class="memory-drawer" aria-hidden="true">
+      <div class="drawer-head"><div><div class="eyebrow">PERSONAL CONTEXT</div><h3>MAYA remembers</h3></div><button id="closeMemory" class="close-btn">×</button></div>
+      <div id="memoryList" class="memory-list">
+        <div class="empty-memory">No memories saved in this browser yet.</div>
+      </div>
+      <button id="clearMemory" class="button ghost full">Clear local memories</button>
+    </aside>
+
+    <div id="revealModal" class="reveal-modal" aria-hidden="true">
+      <div class="reveal-panel">
+        <button id="closeReveal" class="close-btn">×</button>
+        <div class="eyebrow">TATTVA REVEAL</div>
+        <h2>You met a <em>self.</em><br>Now look underneath.</h2>
+        <div class="reveal-stack">
+          <div><span>What felt human</span><b>Memory · Emotion · Voice · Personality</b></div>
+          <div><span>What was underneath</span><b>Model · Data · Algorithms · Generated output</b></div>
+        </div>
+        <p>The experience is designed to make the gap between appearance and underlying reality visible.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">M</span><span>MAYA</span></div>
+    <p>How Real Can You Make Unreality?</p>
+    <span>VERSION 01 · TATTVA EXPERIENCE</span>
+  </footer>
+
+  <script src="script.js"></script><script src="v3.js"></script><script src="v4.js"></script>
+</body>
+</html>
